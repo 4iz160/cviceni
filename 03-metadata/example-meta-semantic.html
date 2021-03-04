@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Název článku - Ukázkový web</title>
+
+  <meta name="author" content="Josef Novák"/>
+  <meta name="description" content="........."/>
+
+  <link rel="canonical" href=""/>
+
+  <meta property="og:url" content="https://......."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Ukázkový článek"/>
+  <meta property="og:description" content="....."/>
+  <meta property="og:image" content="https://......"/>
+  <meta property="og:locale" content="cs_CZ"/>
+
+  <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+  <meta name="DC.title" content="Název článku">
+  <meta name="DC.creator" content="Josef Novák">
+  <meta name="DC.subject" content="........">
+  <meta name="DC.language" content="cs-CZ">
+</head>
+<body>
+<header>
+  <h1>Ukázkový web</h1>
+</header>
+<nav role="navigation">
+  <ul>
+    <li><a href="">Položka menu 1</a></li>
+    <li><a href="">Položka menu 2</a></li>
+    <li><a href="">Položka menu 3</a></li>
+  </ul>
+</nav>
+<main>
+  <article itemscope itemprop="https://schema.org/Article">
+    <header>
+      <h2 itemprop="heading">Název článku</h2>
+      <time property="datePublished" datetime="2021-03-03T15:40:03+01:00">3. 3. 2021</time>
+      <a href="mailto:mail@example.tld" property="author" vocab="http://schema.org/" typeof="Person">
+        <span property="name">Josef Novák</span>
+        <meta property="email" content="mail@example.tld">
+      </a>
+    </header>
+    <img itemprop="image" src="https://......" alt="...."/>
+    <p>Lorem ipsum...</p>
+  </article>
+</main>
+</body>
+</html>
