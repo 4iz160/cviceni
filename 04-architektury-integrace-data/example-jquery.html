@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Ukázka jQuery</title>
+</head>
+<body>
+
+  <button type="button" id="toggleBtn">Přepnout zobrazení formuláře</button>
+
+  <form id="simpleForm">
+    <label for="textInput">Zadejte text</label>
+    <input type="text" id="textInput" />
+    <button type="submit">Zpracovat</button>
+  </form>
+
+  <div id="lastText"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    $('#simpleForm').submit(function(event){
+      event.preventDefault();
+
+      let hodnota = $('#textInput').val().trim();
+      if (hodnota){
+        console.log(hodnota);
+        $('#lastText').text('Naposledy zadaná hodnota: ');
+        let newDiv = $('<div></div>');
+        newDiv.text(hodnota);
+        $('#lastText').append(newDiv);
+      }else{
+        alert('Musíte zadat nějaký text!');
+      }
+    });
+
+    $('#toggleBtn').click(function(event){
+      event.preventDefault();
+      event.stopPropagation();
+
+      $('#simpleForm').toggle();
+    });
+
+  });
+</script>
+
+</body>
+</html>
