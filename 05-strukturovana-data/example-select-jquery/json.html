@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Ukázkové zobrazení objednávky z JSONu</title>
+</head>
+<body>
+
+  <h1>Ukázka načtení dat</h1>
+  <div id="objednavka">
+    <a href="#objednavka" id="loadLink">načti data...</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#loadLink').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        $.getJSON('../example-objednavka/objednavka.json',function(data){
+          $('#h1').text('Objednávka '+data.cisloObjednavky);
+
+          let table=$('<table></table>');
+          $.each(data.polozky, function(key, polozka){
+            let tr = $('<tr></tr>');
+            let nazevTd = $('<td></td>');
+            let pocetTd = $('<td></td>');
+            let cenaTd = $('<td></td>');
+            nazevTd.text(polozka.nazev);
+            pocetTd.text(polozka.pocet);
+            cenaTd.text(polozka.cena+" "+polozka.mena);
+            tr.append(nazevTd);
+            tr.append(pocetTd);
+            tr.append(cenaTd);
+            table.append(tr);
+          });
+
+          $('#objednavka').html(table);
+        });
+      });
+
+    });
+  </script>
+
+</body>
+</html>
