@@ -1,0 +1,13 @@
+<objednavka>
+    <cisloObjednavky>123</cisloObjednavky>
+    <polozka>
+        <nazev>Papír &amp; tužka</nazev>
+        <pocet>10</pocet>
+        <cena mena="CZK">20</cena>
+    </polozka>
+    <polozka>
+        <nazev>Propiska</nazev>
+        <pocet>1</pocet>
+        <cena mena="CZK">15</cena>
+    </polozka>
+</objednavka>

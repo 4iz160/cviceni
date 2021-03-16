@@ -1,0 +1,17 @@
+{
+    "cisloObjednavky": "123",
+    "polozky": [
+        {
+            "nazev": "Papír & tužka",
+            "pocet": 10,
+            "cena": 20,
+            "mena": "CZK"
+        },
+        {
+            "nazev": "Propiska",
+            "pocet": 1,
+            "cena": 15,
+            "mena": "CZK"
+        }
+    ]
+}

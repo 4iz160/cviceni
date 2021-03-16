@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="objednavka" type="objednavkaType"/>
+    
+    <xs:complexType name="objednavkaType">
+        <xs:sequence>
+            <xs:element name="cisloObjednavky" type="xs:string"/>
+            <xs:element name="polozka" type="polozkaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="polozkaType">
+        <xs:sequence>
+            <xs:element name="nazev" type="xs:string"/>
+            <xs:element name="pocet" type="xs:positiveInteger"/>
+            <xs:element name="cena" type="cenaType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="cenaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="mena" type="menaType"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="menaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CZK"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "cisloObjednavky": {"type": "string"},
+        "polozky": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "nazev": {"type": "string"},
+                    "pocet": {"type": "integer"},
+                    "cena": {"type": "number"},
+                    "mena": {
+                        "type": "string",
+                        "pattern": "^CZK$"
+                    }
+                }
+            }
+        }
+    }
+}
