@@ -1,5 +1,5 @@
 <?php
-  $xml = @simplexml_load_file(__DIR__.'/../example-objednavka/objednavka.json');
+  $xml = @simplexml_load_file(__DIR__.'/../example-objednavka/objednavka.xml');
   if (!$xml || !($xml instanceof SimpleXMLElement)){
     exit('Soubor se nepovedlo načíst!');
   }
