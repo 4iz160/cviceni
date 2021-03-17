@@ -19,10 +19,10 @@
                   <th>Počet</th>
                   <th>Cena</th>
                 </tr>';
-        foreach ($xml->polozky as $polozka){
+        foreach ($xml->polozka as $polozka){
           $polozkaCena=(string)$polozka->cena;//načtení textu z uzlu cena
           $polozkaCena.=' ';
-          $polozkaCena.=(string)$polozka['mena'];//načtení hodnoty atributu mena
+          $polozkaCena.=(string)$polozka->cena['mena'];//načtení hodnoty atributu mena
           echo '<tr>
                   <td>'.htmlspecialchars((string)$polozka->nazev).'</td>
                   <td>'.htmlspecialchars((string)$polozka->pocet).'</td>

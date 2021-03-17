@@ -20,9 +20,11 @@
         e.stopPropagation();
 
         $.getJSON('../example-objednavka/objednavka.json',function(data){
-          $('#h1').text('Objednávka '+data.cisloObjednavky);
+          $('h1').text('Objednávka '+data.cisloObjednavky);
 
           let table=$('<table></table>');
+          table.html('<tr><th>Název</th><th>Počet</th><th>Cena</th></tr>');
+          
           $.each(data.polozky, function(key, polozka){
             let tr = $('<tr></tr>');
             let nazevTd = $('<td></td>');

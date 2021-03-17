@@ -21,15 +21,16 @@
 
         $.get('../example-objednavka/objednavka.xml',function(data){
           let xmlData = $(data);
-          $('#h1').text('Objednávka '+xmlData.children('cisloObjednavky').text());
+          $('h1').text('Objednávka '+xmlData.find('cisloObjednavky').text());
 
           let table=$('<table></table>');
+          table.html('<tr><th>Název</th><th>Počet</th><th>Cena</th></tr>');
 
-          xmlData.children('polozka').each(function(){
+          xmlData.find('polozka').each(function(){
             let polozka = $(this);
-            let polozkaNazev = polozka.children('nazev').first();
-            let polozkaPocet = polozka.children('pocet').first();
-            let polozkaCena = polozka.children('cena').first();
+            let polozkaNazev = polozka.find('nazev').first();
+            let polozkaPocet = polozka.find('pocet').first();
+            let polozkaCena = polozka.find('cena').first();
 
             let tr = $('<tr></tr>');
             let nazevTd = $('<td></td>');
