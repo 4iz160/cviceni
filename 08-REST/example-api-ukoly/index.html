@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Ukázková aplikace využívající API</title>
+  <!--styly a skripty z bootstrapu-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="my-4">Ukázka aplikace využívající API</h1>
+    <section id="persons"></section>
+  </div>
+
+  <!--náš ukázkový skript načítající seznam osob z API-->
+  <script>
+
+    function loadPersons(){
+      console.log('začínáme načítat data');
+      $.getJSON('http://vojir.net/ukoly/www/api/persons',function(data){
+        console.log('data načtena');
+        console.log(data);
+        //smažeme seznam osob
+        let personsSection = $('#persons');
+        //projdeme získané výsledky a vykreslíme je jako tabulku
+
+        if (data.hasOwnProperty(length) && data.length>0){
+          //byly načteny nějaké osoby => budeme vypisovat tabulku
+          let personsTable = $('<table class="table"></table>');
+
+          $.each(data, function(index, person){
+            let tr = $('<tr></tr>');
+
+            let nameTd = $('<td></td>');
+            nameTd.text(person.name);
+
+            let emailTd = $('<td></td>');
+            emailTd.text(person.email);
+
+            tr.append(nameTd);
+            tr.append(emailTd);
+            personsTable.append(tr);
+          });
+
+          //výsledek vložíme do stránky
+          personsSection.html(personsTable);
+        }else{
+          //zobrazíme info o nenačtení dat
+          personsSection.html('<em class="text-muted">Nebyly nalezeny žádné osoby.</em>');
+        }
+
+      }).fail(function(){
+        console.error('Data se nepodařilo načíst.');
+      });
+    }
+
+
+    $(document).ready(function(){
+      loadPersons();
+
+    });
+  </script>
+
+</body>
+</html>
