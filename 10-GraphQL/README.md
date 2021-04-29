@@ -9,8 +9,8 @@ Další zdroje ke cvičení, doplňkové informace:
 - [How to GraphQL](https://www.howtographql.com/) (interaktivní tutoriál)
 - [GraphQL specification](https://github.com/graphql/graphql-spec) 
 
-- [GraphQL Weather API](https://github.com/konstantinmuenster/graphql-weather-api) ([testovací rozhraní](https://countries.trevorblades.com/))
-- [Countries GraphQL API](https://github.com/trevorblades/countries) ([testovací rozhraní]())
+- [GraphQL Weather API](https://github.com/konstantinmuenster/graphql-weather-api) ([testovací rozhraní](https://graphql-weather-api.herokuapp.com/))
+- [Countries GraphQL API](https://github.com/trevorblades/countries) ([testovací rozhraní](https://countries.trevorblades.com/))
 - [GitHub GraphQL API](https://docs.github.com/en/graphql/overview/explorer)
 
 
