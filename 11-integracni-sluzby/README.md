@@ -7,7 +7,7 @@ Další zdroje ke cvičení, doplňkové informace:
 - [Zapier](https://zapier.com)
 - [Microsoft Flow](https://flow.microsoft.com)
 - [Integromat](https://www.integromat.com)
-- [n8n.io](n8n.io)
+- [n8n.io](http://n8n.io)
 - integrace v oblasti IOT
   - [Home Assistant](https://www.home-assistant.io/)
   - [openHAB](https://www.openhab.org/)  
