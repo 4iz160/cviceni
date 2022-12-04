@@ -5,8 +5,8 @@
 Další zdroje ke cvičení, doplňkové informace:
 - [IFTTT](https://ifttt.com/)
 - [Zapier](https://zapier.com)
-- [Microsoft Flow](https://flow.microsoft.com)
-- [Integromat](https://www.integromat.com)
+- [Power Automate](https://powerautomate.microsoft.com)
+- [Make](https://www.make.com)
 - [n8n.io](http://n8n.io)
 - integrace v oblasti IOT
   - [Home Assistant](https://www.home-assistant.io/)
