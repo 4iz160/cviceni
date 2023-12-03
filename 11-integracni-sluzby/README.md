@@ -5,7 +5,7 @@
 Další zdroje ke cvičení, doplňkové informace:
 - [IFTTT](https://ifttt.com/)
 - [Zapier](https://zapier.com)
-- [Power Automate](https://powerautomate.microsoft.com)
+- [Power Automate](https://make.powerautomate.com)
 - [Make](https://www.make.com)
 - [n8n.io](http://n8n.io)
 - integrace v oblasti IOT
