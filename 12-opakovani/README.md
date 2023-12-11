@@ -4,5 +4,5 @@
 
 ## Odkazy pro toto cvičení:
 - [otázky ke zkoušce](./otázky%20ke%20zkoušce.xlsx)
-- [losování otázek ke zkoušce](https://forms.gle/FjgcLj8qjdmKbPii8)
-- [týmové opakování](https://forms.gle/KGRPcYHhLAsJwXqS6)
+- [losování otázek ke zkoušce](https://forms.gle/V4DKaoRKhMzA2SCV8)
+- [týmové opakování](https://forms.gle/1vVZXcTgajEUXcpK9)
