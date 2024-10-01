@@ -18,6 +18,8 @@
  * login: **xname**
  * heslo: **jako do školní sítě**
 
+Pozor na to, že pokud se připojujete mimo školní síť, je potřeba mít [zapnutou VPN](https://internet.vse.cz/vpn/info-o-vpn/).
+
 ### Vhodný software
  * [WinSCP](http://winscp.net/)
     * k dispozici i na školních počítačích
